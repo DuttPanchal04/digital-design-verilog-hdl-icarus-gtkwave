@@ -1,4 +1,4 @@
-# 💡 Digital Design using Verilog, Icarus Verilog & GTKWave
+# 💡 Digital Design using Verilog HDL, Icarus Verilog & GTKWave
 
 This repository contains a collection of basic Verilog projects focused on digital logic design. All designs are written in Verilog HDL and simulated using **Icarus Verilog** and **GTKWave**. These mini-projects are part of my VLSI learning journey using open-source tools.
 
