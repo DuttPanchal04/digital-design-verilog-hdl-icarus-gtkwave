@@ -1,0 +1,56 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55c772989a00 .scope module, "or_tb" "or_tb" 2 1;
+ .timescale 0 0;
+v0x55c7729996f0_0 .var "a", 0 0;
+v0x55c7729997c0_0 .var "b", 0 0;
+v0x55c772999890_0 .net "y", 0 0, L_0x55c772999990;  1 drivers
+S_0x55c772989b90 .scope module, "u0_DUT" "or_gate" 2 6, 3 1 0, S_0x55c772989a00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_0x55c772999990 .functor OR 1, v0x55c7729996f0_0, v0x55c7729997c0_0, C4<0>, C4<0>;
+v0x55c772989dc0_0 .net "a", 0 0, v0x55c7729996f0_0;  1 drivers
+v0x55c772999510_0 .net "b", 0 0, v0x55c7729997c0_0;  1 drivers
+v0x55c7729995d0_0 .net "y", 0 0, L_0x55c772999990;  alias, 1 drivers
+    .scope S_0x55c772989a00;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "test_or.vcd" {0 0 0};
+    %vpi_call 2 17 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55c772989a00 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55c7729996f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55c7729997c0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55c7729996f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55c7729997c0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55c7729996f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55c7729997c0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55c7729996f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55c7729997c0_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "or_tb.v";
+    "or_gate.v";
