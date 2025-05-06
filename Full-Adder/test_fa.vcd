@@ -1,0 +1,62 @@
+$date
+	Tue May  6 15:28:57 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fa_tb $end
+$var wire 1 ! s $end
+$var wire 1 " cout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % cin $end
+$scope module dut $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % cin $end
+$var wire 1 " cout $end
+$var wire 1 ! s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1!
+1%
+#10
+0%
+1$
+#15
+1"
+0!
+1%
+#20
+0"
+1!
+0%
+0$
+1#
+#25
+1"
+0!
+1%
+#30
+0%
+1$
+#35
+1!
+1%
+#40
