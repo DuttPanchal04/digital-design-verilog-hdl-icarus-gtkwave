@@ -133,6 +133,8 @@ gtkwave test_inv.vcd
 
 ![Inverter Output Waveform](https://github.com/user-attachments/assets/e3ae64e7-2831-4886-ba67-6838db1c0faa)
 
+Follow the same steps for all other projects ( e.g. AND, OR, D_FF, Mux, etc. ) from creating verilog file and testbench file to compile and simulate on Gtkwave software.
+
 ## 📌 Notes
 - The .vcd file will be generated as part of the simulation and can be opened in GTKWave for waveform analysis.
 - Modify testbench signals to test different scenarios and observe the results in GTKWave.
