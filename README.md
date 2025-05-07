@@ -59,16 +59,20 @@ nano inverter.v
 
 ### 🔌 Verilog Code – inverter.v
 ```
+// Simple Inverter Module
+// This module implements a NOT gate (inverter) in Verilog.
+// It takes a single input 'a' and outputs the inverted value on 'y'.
+
 module inverter (
-
-input wire a,
-output wire y
-
+    input wire a,   // Input signal 'a'
+    output wire y   // Output signal 'y', which is the logical NOT of 'a'
 );
 
+// Perform inversion: output 'y' is the bitwise NOT of input 'a'
 assign y = ~a;
 
 endmodule
+
 ```
 Save the file by (`ctrl+o and enter`). And exit from file using (`ctrl+x`).
 
@@ -80,30 +84,36 @@ nano inverter_tb.v
 ### 🧪 Testbench – inverter_tb.v
 
 ```
-`timescale 1ns/100ps 
+`timescale 1ns/100ps  // Time unit = 1ns, time precision = 100ps
 
+// Testbench for the inverter module
 module inverter_tb;
 
-reg a;
-wire y;
+reg a;        // Test input signal (reg type because we drive it in initial block)
+wire y;       // Output from the inverter (connected to DUT)
 
-inverter u0_DUT(
-
-.a(a),
-.y(y)
-
+inverter u0_DUT (
+    .a(a),     // Connect testbench input 'a' to inverter input
+    .y(y)      // Connect testbench output 'y' to inverter output
 );
 
 initial begin
+    // Initialize waveform dump file for viewing in GTKWave or similar tools
+    $dumpfile("test_inv.vcd");   // Name of the waveform dump file
+    $dumpvars(0, inverter_tb);   // Dump all variables in the inverter_tb hierarchy
 
- $dumpfile("test_inv.vcd");
- $dumpvars(0,inverter_tb);
+    // Display a message when simulation starts
+    $display("Starting Inverter Testbench...");
 
-a = 1'b0;
+    // Monitor changes in signals 'a' and 'y', prints every time they change
+    $monitor("Time = %0t | a = %b -> y = %b", $time, a, y);
 
-#5 a = 1'b1;
-#5 a = 1'b0;
-#5 $finish;
+    // Apply test vectors
+    a = 1'b0;    // Set input 'a' to 0
+    #5 a = 1'b1; // Wait 5ns, then set 'a' to 1
+    #5 a = 1'b0; // Wait another 5ns, then set 'a' back to 0
+
+    #5 $finish;  // Finish simulation after 5ns
 end
 
 endmodule
