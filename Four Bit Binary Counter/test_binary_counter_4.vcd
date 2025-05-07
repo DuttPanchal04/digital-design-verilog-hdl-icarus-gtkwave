@@ -1,0 +1,155 @@
+$date
+	Wed May  7 13:50:46 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module bin_count_4_tb $end
+$var wire 4 ! count [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var reg 4 $ count [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+1#
+0"
+b0 !
+$end
+#50
+b1 !
+b1 $
+0#
+1"
+#100
+0"
+#150
+b10 !
+b10 $
+1"
+#200
+0"
+#250
+b11 !
+b11 $
+1"
+#300
+0"
+#350
+b100 !
+b100 $
+1"
+#400
+0"
+#450
+b101 !
+b101 $
+1"
+#500
+0"
+#550
+b110 !
+b110 $
+1"
+#600
+0"
+#650
+b111 !
+b111 $
+1"
+#700
+0"
+#750
+b1000 !
+b1000 $
+1"
+#800
+0"
+#850
+b1001 !
+b1001 $
+1"
+#900
+0"
+#950
+b1010 !
+b1010 $
+1"
+#1000
+0"
+#1050
+b1011 !
+b1011 $
+1"
+#1100
+0"
+#1150
+b1100 !
+b1100 $
+1"
+#1200
+0"
+#1250
+b1101 !
+b1101 $
+1"
+#1300
+0"
+#1350
+b1110 !
+b1110 $
+1"
+#1400
+0"
+#1450
+b1111 !
+b1111 $
+1"
+#1500
+0"
+#1550
+b0 !
+b0 $
+1"
+#1600
+0"
+#1650
+b1 !
+b1 $
+1"
+#1700
+0"
+#1750
+b10 !
+b10 $
+1"
+#1800
+0"
+#1850
+b11 !
+b11 $
+1"
+#1900
+0"
+#1950
+b100 !
+b100 $
+1"
+#2000
+0"
+#2050
+b101 !
+b101 $
+1"
