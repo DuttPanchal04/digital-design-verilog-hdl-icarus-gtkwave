@@ -1,0 +1,72 @@
+$date
+	Wed May  7 19:43:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module alu_8bit_tb $end
+$var wire 9 ! result [8:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 3 $ sel [2:0] $end
+$scope module dut $end
+$var wire 8 % a [7:0] $end
+$var wire 8 & b [7:0] $end
+$var wire 3 ' sel [2:0] $end
+$var reg 9 ( result [8:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10001000 (
+b0 '
+b11001100 &
+b10101010 %
+b0 $
+b11001100 #
+b10101010 "
+b10001000 !
+$end
+#10
+b11101110 !
+b11101110 (
+b1 $
+b1 '
+#20
+b101110110 !
+b101110110 (
+b10 $
+b10 '
+#30
+b111011110 !
+b111011110 (
+b11 $
+b11 '
+#40
+b1100110 !
+b1100110 (
+b100 $
+b100 '
+#50
+b101010101 !
+b101010101 (
+b101 $
+b101 '
+#60
+b10101011 !
+b10101011 (
+b110 $
+b110 '
+#70
+b10101001 !
+b10101001 (
+b111 $
+b111 '
+#80
