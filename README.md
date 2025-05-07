@@ -151,19 +151,13 @@ Follow the same steps for all other projects ( e.g. AND, OR, D_FF, Mux, etc. ) f
 
 ## 🤖 Projects in this Repo
 
-- Inverter
-- AND logic
-- OR logic
-- NAND logic
-- NOR logic
-- XOR logic
-- XNOR logic
-- Half Adder
-- Full Adder
-- 2x1 Mux
-- 4x1 Mux
+- All Basic and Universal Gates ( e.g. Inverter, AND, OR, NAND, NOR, XOR, XNOR )
+- Half and Full Adder
+- 2x1 Mux and 4x1 Mux
 - D Flip Flop
-- More is coming soon...
+- One and Four Bit Comparator
+- Binary Counter
+- More coming soon..
 
 ## 🤝 Connect & Collaborate
 
