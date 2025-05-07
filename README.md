@@ -157,7 +157,9 @@ Follow the same steps for all other projects ( e.g. AND, OR, D_FF, Mux, etc. ) f
 - D Flip Flop
 - One and Four Bit Comparator
 - Binary Counter
-- More coming soon..
+- Clock Divider
+- 2-bit/4-bit/8-bit ALU
+- More coming soon...
 
 ## 🤝 Connect & Collaborate
 
