@@ -1,0 +1,49 @@
+$date
+	Wed May  7 12:42:52 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module one_bit_comparator_tb $end
+$var wire 1 ! less $end
+$var wire 1 " greater $end
+$var wire 1 # equal $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$scope module dut $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 # equal $end
+$var wire 1 ! less $end
+$var wire 1 " greater $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+1#
+0"
+0!
+$end
+#5
+0#
+1!
+1%
+#10
+1"
+0%
+0!
+1$
+#15
+1#
+0"
+1%
+#20
