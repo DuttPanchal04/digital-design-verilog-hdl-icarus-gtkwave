@@ -1,0 +1,4 @@
+read_verilog nand_gate.v
+synth -top nand_gate
+write_json nand_gate.json
+show
