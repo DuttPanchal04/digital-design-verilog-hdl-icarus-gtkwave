@@ -69,7 +69,7 @@ Each of these modules has been:
 
 ---
 
-## ⚙️ Example Project – Inverter ( Part-I RTL Design using Icarus Verilog and Simulation using Gtkwave )
+## ⚙️ Example Project – Inverter ( Part-I: RTL Design using Icarus Verilog and Simulation using Gtkwave )
 
 ### 🔧 Installation (Ubuntu/Debian)
 
