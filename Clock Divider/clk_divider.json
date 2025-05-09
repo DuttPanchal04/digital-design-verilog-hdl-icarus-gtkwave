@@ -1,0 +1,116 @@
+{
+  "creator": "Yosys 0.53+3 (git sha1 6378ba10e, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+  "modules": {
+    "clk_divider": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "clk_divider.v:1.1-42.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "clk_div2": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "clk_div4": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "clk_div8": {
+          "direction": "output",
+          "bits": [ "0" ]
+        }
+      },
+      "cells": {
+        "$abc$101$auto$blifparse.cc:396:parse_blif$102": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$100": {
+          "hide_name": 1,
+          "type": "$_DFF_PP0_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clk_divider.v:11.1-22.4"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 5 ],
+            "Q": [ 4 ],
+            "R": [ 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\clk_div2[0:0]": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "clk_divider.v:11.1-22.4"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "clk_divider.v:3.12-3.15"
+          }
+        },
+        "clk_div2": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "clk_divider.v:5.12-5.20"
+          }
+        },
+        "clk_div4": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "clk_divider.v:6.12-6.20"
+          }
+        },
+        "clk_div8": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "clk_divider.v:7.12-7.20"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "clk_divider.v:4.12-4.15"
+          }
+        }
+      }
+    }
+  }
+}

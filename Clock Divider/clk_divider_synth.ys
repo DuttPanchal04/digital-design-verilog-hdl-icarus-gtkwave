@@ -1,0 +1,4 @@
+read_verilog clk_divider.v
+synth -top clk_divider
+write_json clk_divider.json
+show
