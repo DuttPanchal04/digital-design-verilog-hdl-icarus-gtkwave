@@ -27,7 +27,7 @@ Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder 
 - `module.ys`: Yosys synthesis script
 - `module_synth.v`: Gate-level netlist
 - `module.json`: JSON netlist (for OpenROAD/backend)
-- `module.svg`: Gate-level logic schematic (Yosys `show`)
+- `module_yosys_show.png`: Gate-level logic schematic (Yosys `show`)
 
 ## 🧪 Simulated & Synthesized Modules
 
