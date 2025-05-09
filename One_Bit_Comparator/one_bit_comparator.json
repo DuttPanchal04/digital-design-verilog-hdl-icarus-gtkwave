@@ -1,0 +1,126 @@
+{
+  "creator": "Yosys 0.53+3 (git sha1 6378ba10e, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+  "modules": {
+    "one_bit_comparator": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "one_bit_comparator.v:1.1-15.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "equal": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "greater": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "less": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$abc$117$auto$blifparse.cc:396:parse_blif$118": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 2 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$abc$117$auto$blifparse.cc:396:parse_blif$119": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$abc$117$auto$blifparse.cc:396:parse_blif$120": {
+          "hide_name": 1,
+          "type": "$_XNOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 4 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "one_bit_comparator.v:3.12-3.13"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "one_bit_comparator.v:4.12-4.13"
+          }
+        },
+        "equal": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "one_bit_comparator.v:5.13-5.18"
+          }
+        },
+        "greater": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "one_bit_comparator.v:6.13-6.20"
+          }
+        },
+        "less": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "one_bit_comparator.v:7.13-7.17"
+          }
+        }
+      }
+    }
+  }
+}

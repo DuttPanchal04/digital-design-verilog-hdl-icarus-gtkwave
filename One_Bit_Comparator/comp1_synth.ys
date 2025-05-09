@@ -1,0 +1,4 @@
+read_verilog one_bit_comparator.v
+synth -top one_bit_comparator
+write_json one_bit_comparator.json
+show
