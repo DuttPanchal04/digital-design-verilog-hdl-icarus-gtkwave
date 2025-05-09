@@ -1,46 +1,85 @@
-# 💡 Digital Design using Verilog HDL, Icarus Verilog & GTKWave
+# 💡 RTL Design to Gate-Level Synthesis using Icarus Verilog HDL, GTKWave & Yosys (Open-Source Project)
 
-This repository contains a collection of basic Verilog projects focused on digital logic design. All designs are written in Verilog HDL and simulated using **Icarus Verilog** and **GTKWave**. These mini-projects are part of my VLSI learning journey using open-source tools.
+This repository showcases the complete RTL design, simulation, and gate-level synthesis of various digital logic modules using free and open-source EDA tools such as Icarus Verilog, Gtkwave, and Yosys.
 
 ---
 
 ## 🛠️ Tools Used
 
-- **Verilog HDL** – For writing RTL logic and testbenches
-- **Icarus Verilog** – Open-source Verilog compiler and simulator
-- **GTKWave** – Waveform viewer for visualizing signal activity
+| Tool            | Purpose                           |
+|-----------------|------------------------------------|
+| Verilog (.v)    | Hardware design (RTL)              |
+| Icarus Verilog  | RTL simulation                     |
+| GTKWave         | Waveform visualization             |
+| Yosys           | RTL-to-gate-level synthesis        |
+| Graphviz ( optional )        | Visualizing logic schematics (.svg)|
 
 ---
+
+## Repository or Project Structure
+
+Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder and contains:
+
+- `module.v`: Verilog RTL code
+- `module_tb.v`: Testbench
+- `module.vcd`: Output waveform from Icarus + Gtkwave simulation
+- `waveform.png`: GTKWave screenshot
+- `module.ys`: Yosys synthesis script
+- `module_synth.v`: Gate-level netlist
+- `module.json`: JSON netlist (for OpenROAD/backend)
+- `module.svg`: Gate-level logic schematic (Yosys `show`)
+
+## 🧪 Simulated & Synthesized Modules
+
+- ✅ 8-bit ALU
+- ✅ 2:1 and 4:1 Multiplexers
+- ✅ Basic Logic Gates (AND, OR, NOT, etc.)
+- ✅ 8-bit Up Counter
+- ✅ 4-bit Comparator
+- ✅ Clock Divider, etc.
+
+Each of these modules has been:
+- Designed in Verilog
+- Simulated using Icarus Verilog + GTKWave
+- Synthesized using Yosys
+- Verified at both RTL and gate-level
 
 ## 🧠 Concepts Covered
 - Structural modeling
 - Testbench design
 - Simulation using Icarus Verilog
 - Visual debugging with GTKWave
+- Sythesis using Yosys
 
-## 🔧 Installation (Ubuntu/Debian)
+## 🔍 Sample: Inverter Module
 
-### Install Icarus Verilog:
+| Artifact        | Description                  |
+|-----------------|------------------------------|
+| `inverter.v`         | RTL Verilog code             |
+| `inverter_tb.v`      | Testbench                    |
+| `test_inv.vcd`       | Waveform from simulation     |
+| `Inverter Output Waveform.png`  | Screenshot from GTKWave      |
+| `inverter_synth.v`   | Gate-level netlist (Yosys)   |
+| `inverter.json`      | Synthesis netlist in JSON    |
+| `inverter.png`       | Gate-level schematic         |
+| `inverter_synth.ys`        | Yosys synthesis script       |
+
+---
+
+## ⚙️ Example Project – Inverter ( Part-I RTL Design using Icarus Verilog and Simulation using Gtkwave )
+
+### 🔧 Installation (Ubuntu/Debian)
+
+#### Install Icarus Verilog:
 ```
 sudo apt update
 sudo apt install iverilog
 ```
-### Install GTKWave:
+#### Install GTKWave:
 ```
 sudo apt install gtkwave
 ```
-## 📁 Project Structure Example
-Each project is organized in its own folder:
-```
-project/
-├── project.v             # Verilog logic file
-├── project_tb.v          # Testbench file
-├── run.sh                 # Compile & simulate script
-├── project_output.vcd             # Waveform dump file (auto-generated)
-├── waveform.png           # Screenshot of GTKWave 
-```
-
-## ⚙️ Example Project – Inverter
+Done installation. Next step:
 
 Organize your project by running this commands. Assuming Home is current directory. 
 
@@ -57,7 +96,7 @@ Create our (`inverter.v`) file using this command and start writing verilog code
 nano inverter.v
 ```
 
-### 🔌 Verilog Code – inverter.v
+#### 🔌 Verilog Code – inverter.v
 ```
 // Simple Inverter Module
 // This module implements a NOT gate (inverter) in Verilog.
@@ -81,7 +120,7 @@ Create testbench verilog file using same command and start writing testbench:
 nano inverter_tb.v
 ```
 
-### 🧪 Testbench – inverter_tb.v
+#### 🧪 Testbench – inverter_tb.v
 
 ```
 `timescale 1ns/100ps  // Time unit = 1ns, time precision = 100ps
@@ -122,20 +161,20 @@ endmodule
 
 Save and exit.
 
-### ▶️ Running the Simulation
-#### Step 1: Compile the design and testbench
+#### ▶️ Running the Simulation
+##### Step 1: Compile the design and testbench
 ```
 iverilog -o inverter_wave inverter.v inverter_tb.v
 ```
-#### Step 2: Run the simulation
+##### Step 2: Run the simulation
 ```
 vvp inverter_wave
 ```
-#### Step 3: View waveform in GTKWave
+##### Step 3: View waveform in GTKWave
 ```
 gtkwave test_inv.vcd
 ```
-#### Inside GTKWave:
+##### Inside GTKWave:
 
 - Load signals from the module (inverter_tb)
 - Add inputs/outputs (a, y) to the waveform panel
@@ -145,21 +184,107 @@ gtkwave test_inv.vcd
 
 Follow the same steps for all other projects ( e.g. AND, OR, D_FF, Mux, etc. ) from creating verilog file and testbench file to compile and simulate on Gtkwave software.
 
+## 🔧 Example Inverter Project ( Part 2: RTL to Gate-Level Synthesis Using Yosys )
+
+This section covers how to install **Yosys**, synthesize your Verilog RTL design (e.g., inverter), and generate gate-level artifacts for visualization and backend flows.
+
+---
+
+### 🛠️ Step 1: Install Yosys
+
+#### ✅ Method 1: APT (Quick Install)
+
+```
+sudo apt update
+sudo apt install yosys
+```
+This installs a stable version available via Ubuntu's package manager.
+
+#### ✅ Method 2: Build Latest from Source (Recommended)
+```
+sudo apt install -y build-essential clang bison flex libreadline-dev \
+  gawk tcl-dev libffi-dev git graphviz xdot pkg-config python3 python3-pip \
+  libboost-system-dev libboost-python-dev libboost-filesystem-dev
+
+# Clone and build Yosys
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+git submodule update --init --recursive
+make -j$(nproc)
+sudo make install
+```
+Verify Installtion using:
+```
+yosys -V
+```
+
+### 📜 Step 2: Create Yosys Script
+Create a file named inverter.ys with the following content:
+
+```
+# Step 1: Read the RTL Verilog source file
+read_verilog inverter.v
+
+# Step 2: Synthesize the design and specify the top-level module name
+synth -top inverter
+
+# Step 3: Write the synthesized gate-level netlist in JSON format
+# Useful for backend tools like OpenROAD
+write_json inverter.json
+
+# Step 4: Write the synthesized netlist as Verilog
+# This can be used for gate-level simulation
+write_verilog inverter_synth.v
+
+# Step 5: Display a logic-level schematic of the synthesized design
+# Requires xdot and Graphviz installed
+show
+
+```
+
+### ▶️ Step 4: Run Synthesis
+Execute the script:
+```
+yosys inverter.ys
+```
+This command will:
+
+- Read the RTL Verilog
+- Synthesize it to gate-level netlist
+  
+Write outputs:
+
+- inverter_synth.v – synthesized gate-level Verilog
+- inverter.json – JSON-formatted netlist
+- Schematic (viewed with show)
+
+![inverter yosys_show](https://github.com/user-attachments/assets/71bc1e1d-ae4d-430c-9334-ce370b4f8a61)
+
+### 🖼️ Step 5: View Gate-Level Schematic (Optional)
+To launch the graphical schematic from within Yosys:
+
+```
+yosys
+```
+Then in the Yosys shell:
+```
+read_verilog inverter.v
+synth -top inverter
+show
+```
+
+This will open a logic-level schematic (e.g., showing $NOT, $AND, etc.) using xdot.
+
 ## 📌 Notes
 - The .vcd file will be generated as part of the simulation and can be opened in GTKWave for waveform analysis.
 - Modify testbench signals to test different scenarios and observe the results in GTKWave.
 
-## 🤖 Projects in this Repo
+## 🚀 What's Next
 
-- All Basic and Universal Gates ( e.g. Inverter, AND, OR, NAND, NOR, XOR, XNOR )
-- Half and Full Adder
-- 2x1 Mux and 4x1 Mux
-- D Flip Flop
-- One and Four Bit Comparator
-- Binary Counter
-- Clock Divider
-- 2-bit/4-bit/8-bit ALU
-- More coming soon...
+- ⏳ Gate-level simulation using synthesized `.v` netlists
+- ⏳ Layout generation with OpenROAD and Sky130 PDK
+- ⏳ Static timing analysis using OpenSTA
+- ⏳ Open-source chip tape-out (future goal)
 
 ## 🤝 Connect & Collaborate
 
