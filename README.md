@@ -32,11 +32,12 @@ Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder 
 
 ## 🧪 Simulated & Synthesized Modules
 
-- ✅ 8-bit ALU
+- ✅ 2-bit/4-bit/8-bit ALU
 - ✅ 2:1 and 4:1 Multiplexers
-- ✅ Basic Logic Gates (AND, OR, NOT, etc.)
-- ✅ 8-bit Up Counter
-- ✅ 4-bit Comparator
+- ✅ All Basic and Universal Logic Gates (AND, OR, NOT, etc.)
+- ✅ 4-bit Binary Up Counter
+- ✅ 1-bit/4-bit Comparator
+- ✅ Half Adder and Full Adder
 - ✅ Clock Divider, etc.
 
 Each of these modules has been:
