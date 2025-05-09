@@ -16,7 +16,7 @@ This repository showcases the complete RTL design, simulation, and gate-level sy
 
 ---
 
-## Repository or Project Structure
+## 📂 Repository or Project Structure
 
 Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder and contains:
 
