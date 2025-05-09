@@ -1,0 +1,4 @@
+read_verilog ha.v
+synth -top ha
+write_json ha.json
+show
