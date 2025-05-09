@@ -1,0 +1,4 @@
+read_verilog or_gate.v
+synth -top or_gate
+write_json or_gate.json
+show
