@@ -29,6 +29,7 @@ Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder 
 - `module.blif`: Logic netlist format
 - `module.json`: JSON netlist (for OpenROAD/backend)
 - `module_yosys_show.png`: Gate-level logic schematic (Yosys `show`)
+- `empty`: Ignore it. ( No use ).
 
 ## 🔍 Sample: Inverter Module
 
