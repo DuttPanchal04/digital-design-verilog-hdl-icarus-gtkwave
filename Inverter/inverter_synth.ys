@@ -1,0 +1,4 @@
+read_verilog inverter.v
+synth -top inverter
+write_json inverter.json
+show
