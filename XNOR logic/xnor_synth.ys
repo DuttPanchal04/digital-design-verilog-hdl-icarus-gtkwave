@@ -1,0 +1,4 @@
+read_verilog xnor_gate.v
+synth -top xnor_gate
+write_json xnor_gate.json
+show
