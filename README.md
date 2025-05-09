@@ -30,6 +30,20 @@ Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder 
 - `module.json`: JSON netlist (for OpenROAD/backend)
 - `module_yosys_show.png`: Gate-level logic schematic (Yosys `show`)
 
+## 🔍 Sample: Inverter Module
+
+| Artifact        | Description                  |
+|-----------------|------------------------------|
+| `inverter.v`         | RTL Verilog code             |
+| `inverter_tb.v`      | Testbench                    |
+| `test_inv.vcd`       | Waveform from simulation     |
+| `Inverter Output Waveform.png`  | Screenshot from GTKWave      |
+| `inverter_synth.v`   | Gate-level netlist (Yosys)   |
+| `inverter.json`      | Synthesis netlist in JSON    |
+| `inverter.blif`   | Logic level netlist ( Yosys )   |
+| `inverter.png`       | Gate-level schematic         |
+| `inverter_synth.ys`        | Yosys synthesis script       |
+
 ## 🧪 Simulated & Synthesized Modules
 
 - ✅ 2-bit/4-bit/8-bit ALU
@@ -52,20 +66,6 @@ Each of these modules has been:
 - Simulation using Icarus Verilog
 - Visual debugging with GTKWave
 - Sythesis using Yosys
-
-## 🔍 Sample: Inverter Module
-
-| Artifact        | Description                  |
-|-----------------|------------------------------|
-| `inverter.v`         | RTL Verilog code             |
-| `inverter_tb.v`      | Testbench                    |
-| `test_inv.vcd`       | Waveform from simulation     |
-| `Inverter Output Waveform.png`  | Screenshot from GTKWave      |
-| `inverter_synth.v`   | Gate-level netlist (Yosys)   |
-| `inverter.json`      | Synthesis netlist in JSON    |
-| `inverter.blif`   | Logic level netlist ( Yosys )   |
-| `inverter.png`       | Gate-level schematic         |
-| `inverter_synth.ys`        | Yosys synthesis script       |
 
 ---
 
