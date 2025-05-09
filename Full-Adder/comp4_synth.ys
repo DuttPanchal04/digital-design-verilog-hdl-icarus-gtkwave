@@ -1,0 +1,4 @@
+read_verilog four_bit_comp.v
+synth -top four_bit_comp
+write_json four_bit_comp.json
+show
