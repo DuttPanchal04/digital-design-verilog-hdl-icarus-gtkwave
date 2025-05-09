@@ -26,6 +26,7 @@ Each module ( e.g. ALU, MUX, Gates, Counter, etc.) is located in its own folder 
 - `waveform.png`: GTKWave screenshot
 - `module.ys`: Yosys synthesis script
 - `module_synth.v`: Gate-level netlist
+- `module.blif`: Logic netlist format
 - `module.json`: JSON netlist (for OpenROAD/backend)
 - `module_yosys_show.png`: Gate-level logic schematic (Yosys `show`)
 
@@ -61,6 +62,7 @@ Each of these modules has been:
 | `Inverter Output Waveform.png`  | Screenshot from GTKWave      |
 | `inverter_synth.v`   | Gate-level netlist (Yosys)   |
 | `inverter.json`      | Synthesis netlist in JSON    |
+| `inverter.blif`   | Logic level netlist ( Yosys )   |
 | `inverter.png`       | Gate-level schematic         |
 | `inverter_synth.ys`        | Yosys synthesis script       |
 
