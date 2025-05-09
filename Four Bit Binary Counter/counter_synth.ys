@@ -1,0 +1,4 @@
+read_verilog bin_count_4.v
+synth -top bin_count_4
+write_json bin_count_4.json
+show
