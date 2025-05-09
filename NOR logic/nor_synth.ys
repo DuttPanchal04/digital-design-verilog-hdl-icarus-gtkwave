@@ -1,0 +1,4 @@
+read_verilog nor_gate.v
+synth -top nor_gate
+write_json nor_gate.json
+show
