@@ -1,0 +1,4 @@
+read_verilog alu_8bit.v
+synth -top alu_8bit
+write_json alu_8bit.json
+show
