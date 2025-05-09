@@ -1,0 +1,4 @@
+read_verilog xor_gate.v
+synth -top xor_gate
+write_json xor_gate.json
+show
