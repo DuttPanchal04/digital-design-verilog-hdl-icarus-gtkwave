@@ -222,7 +222,12 @@ yosys -V
 ```
 
 ### 📜 Step 2: Create Yosys Script
-Create a file named inverter.ys with the following content:
+Create a file named (`inverter_synth.ys`) with the following content:
+
+```
+nano inverter_synth.ys
+```
+Write Yosys script:
 
 ```
 # Step 1: Read the RTL Verilog source file
@@ -239,7 +244,10 @@ write_json inverter.json
 # This can be used for gate-level simulation
 write_verilog inverter_synth.v
 
-# Step 5: Display a logic-level schematic of the synthesized design
+# Step 5: Logic level netlist ( .blif ) file
+write_blif inverter.blif
+
+# Step 6: Display a logic-level schematic of the synthesized design
 # Requires xdot and Graphviz installed
 show
 
@@ -248,7 +256,7 @@ show
 ### ▶️ Step 4: Run Synthesis
 Execute the script:
 ```
-yosys inverter.ys
+yosys inverter_synth.ys
 ```
 This command will:
 
