@@ -1,0 +1,4 @@
+read_verilog d_ff.v
+synth -top d_ff
+write_json d_ff.json
+show
