@@ -1,0 +1,4 @@
+read_verilog mux_2_1.v
+synth -top mux_2_1
+write_json mux_2_1.json
+show
